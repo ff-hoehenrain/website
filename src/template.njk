@@ -1,0 +1,74 @@
+{# https://mozilla.github.io/nunjucks/templating.html#template-inheritance #}
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Die offiziele Homepage der Freiwilligen Feuerwehr Höhenrain e. V.">
+        <meta name="author" content="theexiile1305">
+        <title>Freiwillige Feuerwehr Höhenrain e. V.</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+        <meta name="theme-color" content="#000000"/>
+        <link rel="stylesheet" href="../sass/main.scss"/>
+    </head>
+    <body class="is-preload">
+        <header id="header">
+			<a class="logo" href="/index.njk">Freiwillige Feuerwehr Höhenrain e. V.</a>
+		</header>
+
+        <section id="banner">
+			<div class="inner">
+				<h1>Freiwillige Feuerwehr Höhenrain e. V.</h1>
+			</div>
+			<video autoplay loop muted playsinline src="../images/banner.mp4"></video>
+		</section>
+
+        {% block main %}Main{% endblock %}
+
+        <footer id="footer">
+			<div class="inner">
+				<div class="content">
+					<section>
+						<h3>Kontaktieren Sie uns</h3>
+						<p>
+							Falls Sie uns eine Nachricht hinterlassen wollen, senden Sie uns eine E-Mail an
+							<a href="mailto:vorstand@ff-hoehenrain.de" class="dotted">vorstand@ff-hoehenrain.de</a>
+							. Die Beantwortung Ihrer Anfrage wird so schnell wie möglich beantwortet.
+						</p>
+					</section>
+					<section>
+						<h4>Kontaktdaten</h4>
+						<ul class="alt">
+							<li>
+								<strong>Adresse: </strong>
+								<br>
+								1. Vorstand Stefan Monn
+								<br>
+								Kirchanger 4 &bull; 82335 Höhenrain
+							</li>
+							<li>
+								<strong>Email: </strong>
+								<a href="mailto:vorstand@ff-hoehenrain.de">vorstand@ff-hoehenrain.de</a>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Soziale Kontakte</h4>
+						<ul class="plain">
+							<li><a href="mailto:vorstand@ff-hoehenrain.de"><i class="fas fa-envelope">&nbsp;</i>E-Mail</a></li>
+							<li><a href="https://ff-hoehenrain.de"><i class="fas fa-globe">&nbsp;</i>Homepage</a></li>
+						</ul>
+					</section>
+				</div>
+				<div class="copyright">
+					Powered by <a class="dotted" href="https://parceljs.org/">parceljs</a>
+                    --- Please report issues on <a class="dotted" href="https://github.com/ff-hoehenrain/website/issues">GitHub</a>
+                    </br>
+                    &copy; 2021 Michael Fuchs | <a class="dotted" href="/impressum.njk">Impressum</a> | <a class="dotted" href="/privacy.njk">Datenschutzerklärung</a>
+				</div>
+			</div>
+		</footer>
+
+		<script src="../js/util.js"></script>
+		<script src="../js/main.js"></script>
+    </body>
+</html>
